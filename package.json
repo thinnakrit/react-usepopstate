@@ -1,0 +1,35 @@
+{
+    "name": "react-usepopstate",
+    "version": "1.0.0",
+    "description": "React window event listener popstate",
+    "keywords": [
+      "hook",
+      "hooks",
+      "popstate",
+      "react",
+      "react-hooks",
+      "react-usepopstate",
+      "window-popstate"
+    ],
+    "repository": "https://github.com/thinnakrit/react-usepopstate",
+    "homepage": "https://github.com/thinnakrit/react-usepopstate#readme",
+    "license": "MIT",
+    "author": "Thinnakrit Knoo-Aksorn <thinnakrit.idesign@gmail.com>",
+    "source": "src/index.js",
+    "main": "dist/index.js",
+    "module": "dist/index.module.js",
+    "unpkg": "dist/index.umd.js",
+    "scripts": {
+      "build": "microbundle"
+    },
+    "devDependencies": {
+      "@babel/core": "^7.12.10",
+      "@babel/preset-react": "^7.12.10",
+      "microbundle": "^0.12.4",
+      "react": "^16.14.0",
+      "react-dom": "^16.14.0"
+    },
+    "peerDependencies": {
+      "react": "^16.8.0 || ^17.0.0"
+    }
+  }
