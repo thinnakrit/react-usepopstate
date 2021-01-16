@@ -31,6 +31,7 @@ import usePopstate from 'react-usepopstate';
 
 const render = () => {
   	const { isBackButtonClicked } = usePopstate({
+    isPrompt: true,
 		alertDescription: 'Confirm back',
 		callback: () => {
 			alert('BACK')
@@ -47,12 +48,13 @@ const render = () => {
 
 ## Documentation
 ```javascript
-const { isBackButtonClicked } = usePopstate({ alertDescription, callback })
+const { isBackButtonClicked } = usePopstate({ isPrompt, alertDescription, callback })
 ```
 
 #### Parameters object
-* `alertDescription` {`String`} Confirm propmt description
+* `alertDescription` {`String`} Confirm prompt description
 * `callback` {`Function`} Callback function
+* `isPrompt` {`Booleen`} Use confirm propmt **default : false**
 
 #### Return value
 * `isBackButtonClicked` {`Booleen`} Back status

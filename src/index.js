@@ -1,6 +1,10 @@
 import { useState, useEffect } from 'react'
 // ---
-export default ({ alertDescription, callback }) => {
+export default ({
+	alertDescription,
+	callback,
+	isPrompt = false
+}) => {
 	const [
 		isBackButtonClicked,
 		setBackbuttonPress,
@@ -28,18 +32,25 @@ export default ({ alertDescription, callback }) => {
 	const onBackButtonEvent = (e) => {
 		e.preventDefault()
 		if (!isBackButtonClicked) {
-			if (window.confirm(alertDescription)) {
+			if (isPrompt) {
+				if (window.confirm(alertDescription)) {
+					if (callback) {
+						callback()
+					}
+					setBackbuttonPress(true)
+				} else {
+					window.history.pushState(
+						null,
+						null,
+						window.location.pathname
+					)
+					setBackbuttonPress(false)
+				}
+			} else {
 				if (callback) {
 					callback()
 				}
 				setBackbuttonPress(true)
-			} else {
-				window.history.pushState(
-					null,
-					null,
-					window.location.pathname
-				)
-				setBackbuttonPress(false)
 			}
 		}
 	}
