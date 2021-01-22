@@ -1,11 +1,5 @@
 <p align="center">React window event listener popstate</p>
 <p align="center">
-    <a href="https://circleci.com/gh/thinnakrit/react-usepopstate">
-        <img src="https://circleci.com/gh/thinnakrit/react-usepopstate.svg?style=svg" />
-    </a>
-    <a href="https://coveralls.io/github/thinnakrit/react-usepopstate?branch=master">
-        <img src="https://coveralls.io/repos/github/thinnakrit/react-usepopstate/badge.svg?branch=master" />
-    </a>
     <a href="https://www.npmjs.com/package/react-usepopstate">
         <img src="https://img.shields.io/npm/v/react-usepopstate.svg" />
     </a>
